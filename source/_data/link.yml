@@ -1,0 +1,27 @@
+- class_name: Site Entry
+  class_desc: Replace these links with your own site and profile
+  link_list:
+    - name: Your Blog
+      link: https://your-domain.example
+      avatar: /img/placeholder-avatar.png
+      descr: A short one-line summary of your blog
+    - name: Your GitHub
+      link: https://github.com/yourname
+      avatar: https://github.githubassets.com/favicons/favicon.png
+      descr: Your public repositories and projects
+
+- class_name: Recommended
+  class_desc: Useful references for maintaining this blog
+  link_list:
+    - name: Butterfly
+      link: https://github.com/jerryc127/hexo-theme-butterfly
+      avatar: https://github.githubassets.com/favicons/favicon.png
+      descr: The Hexo theme used by this template
+    - name: Butterfly Docs
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/favicon.png
+      descr: Theme configuration and page examples
+    - name: Hexo
+      link: https://hexo.io/
+      avatar: https://hexo.io/icon/favicon-196x196.png
+      descr: Official Hexo documentation

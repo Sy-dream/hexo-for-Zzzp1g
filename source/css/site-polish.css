@@ -1,0 +1,286 @@
+:root {
+  --girl-accent: #e59aaf;
+  --girl-accent-deep: #c67690;
+  --girl-rose: #f3c7d4;
+  --girl-cream: #fff7f8;
+  --girl-lilac: #f7f0fb;
+  --girl-ink: #6c5760;
+  --girl-border: rgba(229, 154, 175, 0.22);
+  --girl-shadow: 0 20px 50px rgba(199, 136, 157, 0.16);
+}
+
+/* Warm, airy atmosphere instead of a cold tech-blog look. */
+body {
+  color: var(--girl-ink);
+}
+
+#web_bg {
+  filter: saturate(0.92) brightness(1.02);
+  transform: scale(1.02);
+}
+
+#web_bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(255, 219, 230, 0.48), transparent 20%),
+    radial-gradient(circle at 84% 14%, rgba(245, 229, 255, 0.42), transparent 22%),
+    radial-gradient(circle at 76% 82%, rgba(255, 239, 214, 0.4), transparent 24%),
+    linear-gradient(180deg, rgba(255, 249, 250, 0.2) 0%, rgba(255, 246, 248, 0.52) 100%);
+  pointer-events: none;
+}
+
+#page-header::before {
+  background: linear-gradient(180deg, rgba(122, 91, 104, 0.12), rgba(122, 91, 104, 0.04)) !important;
+}
+
+#page-header.full_page,
+#page-header.not-home-page {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+#page-header.full_page::before,
+#page-header.not-home-page::before {
+  background: transparent !important;
+}
+
+#site-title,
+#site-subtitle,
+#page-header #site-info {
+  text-shadow: 0 10px 25px rgba(101, 73, 82, 0.16);
+}
+
+#nav .site-name,
+#nav .menus_items .menus_item > a,
+#nav #toggle-menu {
+  color: #7b5d66 !important;
+}
+
+#page-header.nav-fixed #nav,
+#page-header.not-top-img #nav {
+  background: rgba(255, 248, 250, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 154, 175, 0.16);
+  box-shadow: 0 12px 35px rgba(197, 154, 169, 0.1);
+}
+
+#recent-posts .recent-post-item,
+#aside-content .card-widget,
+#post,
+#page,
+#archive {
+  background: rgba(255, 251, 252, 0.82) !important;
+  border: 1px solid var(--girl-border);
+  box-shadow: var(--girl-shadow);
+  border-radius: 26px;
+}
+
+#recent-posts .recent-post-item:hover,
+#aside-content .card-widget:hover {
+  box-shadow: 0 26px 60px rgba(199, 136, 157, 0.22);
+  transform: translateY(-3px);
+}
+
+#recent-posts .recent-post-item .post_cover img {
+  filter: saturate(0.92) brightness(1.02);
+}
+
+#aside-content .card-widget,
+#post,
+#page,
+#archive {
+  backdrop-filter: blur(12px);
+}
+
+#aside-content .card-info .card-info-social-icons i,
+#aside-content .item-headline i,
+#pagination .page-number.current,
+#pagination .extend:hover,
+#pagination .page-number:hover,
+#footer a:hover,
+a:hover {
+  color: var(--girl-accent-deep) !important;
+}
+
+#aside-content .card-info #card-info-btn,
+button,
+.button--animated,
+#pagination .page-number.current {
+  background: linear-gradient(135deg, #f1c1d0, #df9fb2) !important;
+  border: none !important;
+  box-shadow: 0 12px 26px rgba(212, 139, 162, 0.22);
+}
+
+#aside-content .card-info #card-info-btn:hover,
+button:hover,
+.button--animated:hover {
+  background: linear-gradient(135deg, #e4a6bc, #cd809a) !important;
+}
+
+.layout > div:first-child:not(.recent-posts) {
+  border-radius: 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #7a5b66;
+}
+
+blockquote {
+  background: linear-gradient(135deg, rgba(255, 244, 247, 0.9), rgba(248, 240, 251, 0.9));
+  border-left: 4px solid #e3a5ba;
+  border-radius: 18px;
+}
+
+hr {
+  border-top: 1px dashed rgba(227, 165, 186, 0.55);
+}
+
+.container :not(pre) > code {
+  background: #fff0f4;
+  color: #a25f76;
+  border: 1px solid rgba(227, 165, 186, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Softer code blocks that still keep good contrast. */
+.container figure.highlight,
+.container pre {
+  --hl-color: #f7edf2;
+  --hl-bg: #7b5f6a;
+  --hltools-bg: #6f5560;
+  --hltools-color: #fbeef3;
+  --hlnumber-bg: #7b5f6a;
+  --hlnumber-color: #e5cad3;
+  --hlscrollbar-bg: #c996a8;
+  --hlexpand-bg: linear-gradient(180deg, rgba(123, 95, 106, 0.24), rgba(123, 95, 106, 0.96));
+  background: var(--hl-bg) !important;
+  color: var(--hl-color) !important;
+  box-shadow: 0 18px 35px rgba(123, 95, 106, 0.18);
+  border-radius: 20px;
+}
+
+.container figure.highlight .highlight-tools,
+.container figure.highlight .gutter pre,
+.container figure.highlight .code pre,
+.container figure.highlight pre,
+.container figure.highlight table,
+.container pre code {
+  background: var(--hl-bg) !important;
+  color: var(--hl-color) !important;
+}
+
+.container figure.highlight .highlight-tools {
+  background: var(--hltools-bg) !important;
+  color: var(--hltools-color) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container figure.highlight .gutter pre {
+  background: var(--hlnumber-bg) !important;
+  color: var(--hlnumber-color) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container figure.highlight figcaption,
+.container figure.highlight .caption,
+.container figure.highlight figcaption a,
+.container figure.highlight .caption a,
+.container .highlight-tools .code-lang {
+  color: #fbeef3 !important;
+}
+
+.container figure.highlight .line.marked {
+  background-color: rgba(255, 214, 227, 0.18) !important;
+}
+
+.container figure.highlight table::-webkit-scrollbar-thumb,
+.container figure.highlight.default pre::-webkit-scrollbar-thumb {
+  background: var(--hlscrollbar-bg) !important;
+}
+
+.container figure.highlight pre .comment {
+  color: #ead1d9 !important;
+}
+
+.container figure.highlight pre .keyword,
+.container figure.highlight pre .title,
+.container figure.highlight pre .css .hexcolor,
+.container figure.highlight pre .meta {
+  color: #ffd6e3 !important;
+}
+
+.container figure.highlight pre .string,
+.container figure.highlight pre .value,
+.container figure.highlight pre .inheritance,
+.container figure.highlight pre .header,
+.container figure.highlight pre .ruby .symbol,
+.container figure.highlight pre .xml .cdata,
+.container figure.highlight pre .special,
+.container figure.highlight pre .formula {
+  color: #fff0bf !important;
+}
+
+.container figure.highlight pre .number,
+.container figure.highlight pre .preprocessor,
+.container figure.highlight pre .literal,
+.container figure.highlight pre .params,
+.container figure.highlight pre .constant,
+.container figure.highlight pre .command,
+.container figure.highlight pre .built_in {
+  color: #c6f0df !important;
+}
+
+.container figure.highlight pre .function,
+.container figure.highlight pre .python .decorator,
+.container figure.highlight pre .python .title,
+.container figure.highlight pre .ruby .function .title,
+.container figure.highlight pre .ruby .title .keyword,
+.container figure.highlight pre .perl .sub,
+.container figure.highlight pre .javascript .title,
+.container figure.highlight pre .coffeescript .title {
+  color: #ffe2a8 !important;
+}
+
+.container figure.highlight pre .variable,
+.container figure.highlight pre .attribute,
+.container figure.highlight pre .regexp,
+.container figure.highlight pre .ruby .constant,
+.container figure.highlight pre .xml .tag .title,
+.container figure.highlight pre .xml .pi,
+.container figure.highlight pre .xml .doctype,
+.container figure.highlight pre .html .doctype,
+.container figure.highlight pre .css .id,
+.container figure.highlight pre .tag .name,
+.container figure.highlight pre .css .class,
+.container figure.highlight pre .css .pseudo,
+.container figure.highlight pre .tag .attr,
+.container figure.highlight pre .javascript .function {
+  color: #d9f1ff !important;
+}
+
+.container figure.highlight pre .tag {
+  color: #f3d4de !important;
+}
+
+.container figure.highlight.code-fullpage {
+  z-index: 999999 !important;
+}
+
+@media screen and (max-width: 768px) {
+  #recent-posts .recent-post-item,
+  #aside-content .card-widget,
+  #post,
+  #page,
+  #archive {
+    background: rgba(255, 251, 252, 0.9) !important;
+    border-radius: 22px;
+  }
+}
